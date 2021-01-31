@@ -125,9 +125,8 @@ class _LoginFormState extends State<LoginForm> {
                     if (isLoggedIn) {
                       Navigator.of(context).pushReplacementNamed('/home');
                     } else {
-                      _buildShowErrorDialog(context, 'Something went wrong.');
+                      _buildShowErrorDialog(context, auth.message);
                     }
-                    print(isLoggedIn);
                     // Scaffold.of(context)
                     //     .showSnackBar(SnackBar(content: Text('Processing Data')));
                   }

@@ -25,7 +25,7 @@ class AuthProvider extends BaseProvider {
           }));
       if (token != null) {
         setState(Status.SUCCESS);
-        setToken(token);
+        await setToken(token);
         return true;
       }
       return false;
@@ -34,13 +34,20 @@ class AuthProvider extends BaseProvider {
       errors = e.errors;
       print(e.errors);
       setState(Status.ERROR);
+      return false;
     }
   }
 
   Future<bool> logout() async {
-    await removeToken();
-    notifyListeners();
-    return true;
+    try {
+      await api.post('/logout', {});
+      await removeToken();
+      notifyListeners();
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
   }
 
   Future setToken(String token) async {
