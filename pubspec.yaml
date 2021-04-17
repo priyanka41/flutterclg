@@ -32,6 +32,7 @@ dependencies:
   dio: ^3.0.10
   flutter_secure_storage: ^3.3.5
   email_validator: '^1.0.5'
+   #image_picker: ^0.7.4
 
 dev_dependencies:
   flutter_test:
@@ -49,9 +50,14 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets: 
+    - assets/boy2.png
+    - assets/grl8.png
+    - assets/boy1.png
+    - assets/grl7.png
+    - assets/grl6.png
+    - assets/grl5.png
+    - assets/grl5.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

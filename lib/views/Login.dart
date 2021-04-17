@@ -123,7 +123,7 @@ class _LoginFormState extends State<LoginForm> {
                     _formKey.currentState.save();
                     bool isLoggedIn = await auth.login(_email, _password);
                     if (isLoggedIn) {
-                      Navigator.of(context).pushReplacementNamed('/home');
+                      Navigator.of(context).pushReplacementNamed('/drive');
                     } else {
                       _buildShowErrorDialog(context, auth.message);
                     }

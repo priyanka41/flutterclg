@@ -10,7 +10,7 @@ class API {
   factory API() => API._internal();
   API._internal();
 
-  final String baseUrl = 'http://192.168.1.68:8000/api';
+  final String baseUrl = 'http://192.168.10.9:8000/api';
 
   var dio = Dio(BaseOptions(headers: {
     HttpHeaders.contentTypeHeader: Headers.jsonContentType,
@@ -37,7 +37,7 @@ class API {
       dio.options.headers[HttpHeaders.authorizationHeader] =
           "Bearer $accessToken";
       Response response = await dio.post('$baseUrl$url', data: data);
-      print(response.statusCode);
+      print(response);
       return response.data;
     } on DioError catch (e) {
       _responseError(e);
@@ -45,6 +45,7 @@ class API {
   }
 
   _responseError(DioError e) {
+    print(e.message);
     if (e.response != null) {
       switch (e.response.statusCode) {
         case 422:

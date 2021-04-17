@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sanctum_auth/views/Home.dart';
 import 'package:sanctum_auth/views/Login.dart';
 import 'package:sanctum_auth/views/Register.dart';
+import 'package:sanctum_auth/views/drive.dart';
 
 class Routes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -17,6 +18,10 @@ class Routes {
         break;
       case '/register':
         return MaterialPageRoute(builder: (_) => RegisterPage());
+        break;
+
+        case '/drive':
+        return MaterialPageRoute(builder: (_) => DrivePage());
         break;
       default:
         return MaterialPageRoute(
