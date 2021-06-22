@@ -10,7 +10,7 @@ class API {
   factory API() => API._internal();
   API._internal();
 
-  final String baseUrl = 'http://192.168.10.9:8000/api';
+  final String baseUrl = 'http://192.168.10.15:8000/api/driver/register';
 
   var dio = Dio(BaseOptions(headers: {
     HttpHeaders.contentTypeHeader: Headers.jsonContentType,

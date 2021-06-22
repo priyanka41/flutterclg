@@ -22,7 +22,15 @@ class HomePage extends StatelessWidget {
                   Navigator.of(context).pushReplacementNamed('/login');
                 },
                 child: Text('Logout'),
-              )
+              ),
+              RaisedButton(
+                onPressed: () async {
+                  await auth.logout();
+                  Navigator.of(context).pushReplacementNamed('/drive');
+                },
+                child: Text('Drive'),
+              ),
+              
             ],
           ),
         ),

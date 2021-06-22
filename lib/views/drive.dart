@@ -76,11 +76,13 @@
                      mainAxisSize: MainAxisSize.min,
                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                      children: [
-                       FlatButton(onPressed: (){},
+                       FlatButton(onPressed: (){
+                          Navigator.of(context).pushReplacementNamed('/ride');
+                       },
                           
                            
                            child: Text("Accept",
-                           style: TextStyle(color: Colors.black),
+                           style: TextStyle(color: Colors.white),
                            ),
                             
                            color: Colors.green,
@@ -90,7 +92,7 @@
                           FlatButton(onPressed: (){},
                           
                          child: Text("Reject",
-                         style: TextStyle(color: Colors.black),
+                         style: TextStyle(color: Colors.white),
                          ),
                           
                          color: Colors.red,
@@ -142,7 +144,7 @@
                           
                            
                            child: Text("Accept",
-                           style: TextStyle(color: Colors.black),
+                           style: TextStyle(color: Colors.white),
                            ),
                             
                            color: Colors.green,
@@ -152,7 +154,7 @@
                           FlatButton(onPressed: (){},
                           
                          child: Text("Reject",
-                         style: TextStyle(color: Colors.black),
+                         style: TextStyle(color: Colors.white),
                          ),
                           
                          color: Colors.red,
@@ -197,7 +199,7 @@
                           
                            
                            child: Text("Accept",
-                           style: TextStyle(color: Colors.black),
+                           style: TextStyle(color: Colors.white),
                            ),
                             
                            color: Colors.green,
@@ -207,7 +209,7 @@
                           FlatButton(onPressed: (){},
                           
                          child: Text("Reject",
-                         style: TextStyle(color: Colors.black),
+                         style: TextStyle(color: Colors.white),
                          ),
                           
                          color: Colors.red,
@@ -252,7 +254,7 @@
                           
                            
                            child: Text("Accept",
-                           style: TextStyle(color: Colors.black),
+                           style: TextStyle(color: Colors.white),
                            ),
                             
                            color: Colors.green,
@@ -262,7 +264,7 @@
                           FlatButton(onPressed: (){},
                           
                          child: Text("Reject",
-                         style: TextStyle(color: Colors.black),
+                         style: TextStyle(color: Colors.white),
                          ),
                           
                          color: Colors.red,
@@ -304,7 +306,7 @@
                           
                            
                            child: Text("Accept",
-                           style: TextStyle(color: Colors.black),
+                           style: TextStyle(color: Colors.white),
                            ),
                             
                            color: Colors.green,
@@ -314,7 +316,7 @@
                           FlatButton(onPressed: (){},
                           
                          child: Text("Reject",
-                         style: TextStyle(color: Colors.black),
+                         style: TextStyle(color: Colors.white),
                          ),
                           
                          color: Colors.red,
@@ -356,7 +358,7 @@
                           
                            
                            child: Text("Accept",
-                           style: TextStyle(color: Colors.black),
+                           style: TextStyle(color: Colors.white),
                            ),
                             
                            color: Colors.green,
@@ -366,7 +368,7 @@
                           FlatButton(onPressed: (){},
                           
                          child: Text("Reject",
-                         style: TextStyle(color: Colors.black),
+                         style: TextStyle(color: Colors.white),
                          ),
                           
                          color: Colors.red,
@@ -387,3 +389,10 @@
     );
   }
   }
+
+
+
+
+
+
+

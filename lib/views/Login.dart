@@ -23,26 +23,28 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
           child: Center(
               child: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            pageTitle(),
-            LoginForm(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Don't have an account? "),
-                MaterialButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/register');
-                  },
-                  child: Text('Register'),
-                )
-              ],
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              pageTitle(),
+              LoginForm(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account? "),
+                  MaterialButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/register');
+                    },
+                    child: Text('Register'),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ))),
     );
@@ -123,7 +125,7 @@ class _LoginFormState extends State<LoginForm> {
                     _formKey.currentState.save();
                     bool isLoggedIn = await auth.login(_email, _password);
                     if (isLoggedIn) {
-                      Navigator.of(context).pushReplacementNamed('/drive');
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       _buildShowErrorDialog(context, auth.message);
                     }

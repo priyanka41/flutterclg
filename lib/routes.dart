@@ -4,6 +4,7 @@ import 'package:sanctum_auth/views/Home.dart';
 import 'package:sanctum_auth/views/Login.dart';
 import 'package:sanctum_auth/views/Register.dart';
 import 'package:sanctum_auth/views/drive.dart';
+import 'package:sanctum_auth/views/ride.dart';
 
 class Routes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -23,6 +24,11 @@ class Routes {
         case '/drive':
         return MaterialPageRoute(builder: (_) => DrivePage());
         break;
+
+         case '/ride':
+         return MaterialPageRoute(builder: (_) => ActivePage());
+         break;
+        
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
